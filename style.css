@@ -245,3 +245,19 @@ a{
         transform: translateY(0%);
     }
 }
+
+@media (max-width: 1231px) {
+    body {
+      font-size: 1.5rem;
+    }
+    .navbar,
+    .btn {
+      font-size: 0.8rem;
+    }
+  }
+   @media (max-width: 950px){
+    body{
+        justify-content: space-between;
+        align-items: center;
+    }
+   }
