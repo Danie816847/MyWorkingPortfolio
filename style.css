@@ -261,3 +261,149 @@ a{
         align-items: center;
     }
    }
+
+
+@media (max-width: 768px) {
+    /* Ensure the Home section stacks elements vertically */
+    .Home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 80px; /* Adjust padding to prevent overlap */
+    }
+
+    /* Move the image section ABOVE the "Download CV" button */
+    .home-img {
+        order: 1; /* This moves the image to the top */
+        margin-bottom: 20px; /* Add spacing below */
+    }
+
+    /* Move the text section below the image */
+    .home-info {
+        order: 2;
+    }
+
+    /* Ensure the "Download CV" button and social icons stay at the bottom */
+    .btn-sci {
+        order: 3;
+        margin-top: 20px;
+    }
+}
+
+  @media (max-width: 768px) {
+    /* Fix the navbar spacing */
+    .navbar {
+        padding: 15px 5%; /* Adds space inside the navbar */
+        position: fixed;  /* Keeps the navbar on top */
+        top: 0; 
+        left: 0;
+        width: 100%;
+        background: black; /* Ensures navbar is visible */
+        z-index: 1000; /* Keeps it on top of everything */
+    }
+}
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .Home {
+        flex-direction: column;
+        padding: 30px 5% 0;
+        gap: 20px;
+    }
+
+    .home-info h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .home-info h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .home-info p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .home-img .img-box {
+        width: 60vw;
+        height: 60vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 3%;
+    }
+
+    .navbar .logo {
+        font-size: 24px;
+        margin-bottom: 10px; /* Add margin to separate from Home section */
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .Home {
+        padding: 20px 3% 0;
+    }
+
+    .home-info h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .home-info h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .home-info p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .home-img .img-box {
+        width: 80vw;
+        height: 80vw;
+    }
+}
